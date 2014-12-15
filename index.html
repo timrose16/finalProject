@@ -1,0 +1,254 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>Better Betters Inc.</title> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js">	</script>
+	<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3&sensor=false&language=en"></script>
+	<script src="jquery-2.0.1.min.js"></script>
+
+<script type="text/javascript">
+function jqUpdateSize(){
+    // I looked up and found out largest mobile screen in landscape is 800, therefore > 801 redirects to website
+    var width = $(window).width();
+    var height = $(window).height();
+
+	if(width > 801){
+		location.assign("underConstruction.html");
+	}
+	
+};
+$(document).ready(jqUpdateSize);    // When the page first loads
+$(window).resize(jqUpdateSize);     // When the browser changes size
+//-->
+
+function getRealContentHeight() {
+    var header = $.mobile.activePage.find("div[data-role='header']:visible");
+    var footer = $.mobile.activePage.find("div[data-role='footer']:visible");
+    var content = $.mobile.activePage.find("div[data-role='content']:visible:visible");
+    var viewport_height = $(window).height();
+
+    var content_height = viewport_height - header.outerHeight() - footer.outerHeight();
+    if((content.outerHeight() - header.outerHeight() - footer.outerHeight()) <= viewport_height) {
+        content_height -= (content.outerHeight() - content.height());
+    } 
+    return content_height;
+}
+</script>
+</head> 
+
+<body> 
+
+<!-- Start of first page: #one -->
+<div data-role="page" id="one" align="center">
+
+	<div data-role="header">
+		<h1>Better Betters Inc.</h1>
+		<script type="text/javascript">
+
+		</script>
+		<img src="" alt="">
+	</div><!-- /header -->
+
+	<div data-role="content" >	
+		<p> <img src="bbLogo1.jpg" alt="Logo"> </p>
+		<p> Better Betters Inc. is currently located in Crofton, MD. Our corporate offices will be in Las Vegas, Nevada in the Summer of 2015 </p>
+			
+		
+		
+		<p> </p>
+		<p><a href="#two" data-role="button" data-transition="fade">About Us</a></p>	
+		<p><a href="#three" data-role="button" data-transition="fade">Services</a></p>
+		<p><a href="#four" data-role="button" data-transition="fade">Careers</a></p>
+		<p><a href="#five" data-role="button" data-transition="fade">Contact Us</a></p>
+		<p> </p>
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="d">
+		<h4></h4>
+	</div><!-- /footer -->
+</div><!-- /page one -->
+
+
+<!-- Start of second page: #two About The Company -->
+<div data-role="page" id="two" data-theme="a" align="center">
+
+	<div data-role="header">
+	</div><!-- /header -->
+		<script type="text/javascript">
+		</script>
+		
+	<div data-role="content" data-theme="a">	
+		<h2></h2>
+		<div>
+		
+		<h2> <u>About the Company</u> </h2>	
+		
+		<h4> Jay P. Nichols: CEO and Chairman of Better Betters Inc. </h4>
+		<center> <p> <img src="jay.jpg" alt="jay"> </p>
+		<p>As an avid sports fan Jay Nicholls had an idea that there must be some way to predict NFL games using math and statistics.  
+		Using analysis of many years of NFL data, Better Betters was born.  Prior to starting Better Betters, Jay Nicholls was a Finance 
+		major with a minor in Economics at Framingham State University.  While playing hockey for FSU as an assistant captain, Mr. Nicholls 
+		was also involved in the community.  He was the President of the Business Leadership Club and also an intern at the MetroWest Economic 
+		Research Center (MERC) studying and reporting on the Cost of Living.   </p> </center>
+
+	<p>	
+At Better Betters we strive to provide winning picks primarily for NFL games and also NCAA Football using data analytics and in-depth research. 
+ Using historical data combined with intangible current knowledge of players, coaches, and long term trends among teams, we strive to analyze 
+ every game to provide our customers with the most potentially profitable picks of the week.  A sophisticated algorithm is tested every Saturday 
+ for College Football and Sunday for the NFL using vast amounts of data such as; points for/against, passing and rushing yards for/against and 
+ much more. Using this algorithm to predict College Football and the National football league, Better Betters Inc. has established a high 
+ percentage of wins that would help our customers not only invest smart, but continue to win smart. 
+
+		</div>
+		<p><a href="#one" data-rel="back" data-role="button" data-inline="true" data-icon="back">Home</a></p>			
+	</div><!-- /content -->
+	
+	<div data-role="footer">
+		<h4></h4>
+	</div><!-- /footer -->
+</div><!-- /page two -->
+
+
+<!-- Start of third page "Services" -->
+<div data-role="page" id="three" data-theme="a" align="center">
+
+	<div data-role="header">
+	</div><!-- /header -->
+		<script type="text/javascript">
+		</script>
+		
+	<div data-role="content" data-theme="a">	
+		<h2></h2>
+		<div>
+		<p> <img src="" alt=""> </p>
+		<p> <u>Services</u> </p>
+		<p>
+Our main purpose here at Better Betters is to provide the best possible professional service, with the utmost dedication at all times. 
+The rigors of the selection process of our employees who predict the games using our ground breaking mathematical algorithm is the reason 
+why Better Betters is a company for Success. We provide our customers with the most highly studied and calculated games to not bet on, but
+to invest on to reap continual profit for all of our customers. This invaluable service we provide is not only being perfected for NFL and 
+College Football, but is also starting to be tweaked mathematically for all of the world’s top sports. By 2016 Better Betters will be providing
+predictions for the NHL, NBA, EPL, La Liga, Bundesliga, and many more leagues across the world. 
+
+		</div>
+		<p><a href="#one" data-rel="back" data-role="button" data-inline="true" data-icon="back">Home</a></p>			
+	</div><!-- /content -->
+	
+	<div data-role="footer">
+		<h4></h4>
+	</div><!-- /footer -->
+</div><!-- /page two -->
+
+<!-- Start of forth page "Careers"-->
+<div data-role="page" id="four" data-theme="a" align="center">
+
+	<div data-role="header">
+	</div><!-- /header -->
+		<script type="text/javascript">
+		</script>
+		
+	<div data-role="content" data-theme="a">	
+		<h2></h2>
+		<div>
+		<h1> We are currently hiring in multiple positions!!!</h1>
+		
+		<p> <img src="job1.jpg" width="300" height="200" alt="analyst" align= "absmiddle"> </p>
+		<h4><u> Research Analyst</u></h4>
+		<p> Better Betters Inc is currently looking for driven men or woman with a passion for sports and research. This job requires
+		a strong background in mathematical analysis and statistics. A confidentiality agreement would be required to be signed upon hiring</p>
+		
+		<p> <img src="job2.jpg" width="300" height="200" alt="webDev" align= "absmiddle"> </p>
+		<h4><u> Web Developer</u></h4>
+		<p> Better Betters Inc is currently looking for a man or women with expertise in JavaScript, C#, and web development to help us 
+		build our up in coming website. A strong knowledge of web development and design are needed for this position including a strong background
+		in sports. </p>
+		
+		
+		
+		
+		
+		<h5> If anyone is interested in these job openings please email us at BetterBetters@yahoo.com or call us at  </h5>
+		<h5> 443-852-2680 </h5>
+		
+		
+		
+		</div>
+		<p><a href="#one" data-rel="back" data-role="button" data-inline="true" data-icon="back">Home</a></p>			
+	</div><!-- /content -->
+	
+	<div data-role="footer">
+		<h4></h4>
+	</div><!-- /footer -->
+</div><!-- /page two -->
+
+
+<!-- Start of fifth page Contact Us -->
+<div data-role="page" id="five" data-theme="a" align="center">
+
+	<div data-role="header">
+
+	</div><!-- /header -->
+		<script type="text/javascript">
+		
+		</script>
+		
+	<div data-role="content" data-theme="a">	
+		<h2></h2>
+		<div>
+		<form id="" name="" method="get" action="UnderConstruction.html">
+  Name
+  <label>
+  <input type="text" name="memname" id="memname" />
+  </label>
+  <br>
+  gender
+  </br>
+  <br>
+  not given
+  </br>
+  <label>
+  <input name="gender" type="radio"  value="n" checked="checked" />
+  </label>
+  male
+  <label>
+  <input name="gender"  type="radio" value="m" />
+  </label>
+  <br>
+  female
+  </br>
+  <label>
+  <input name="gender" type="radio" value="f" />
+  </label>
+  favorite type of reptile 
+  <br>
+  <label>
+  <select name="favorite" id="favorite">
+    <option value="l">Lizards</option>
+    <option value="s">snakes</option>
+    <option value="t">turtles</option>
+  </select>
+  </br>
+  </label>
+  <br />
+  <br />
+  <label>
+  <input type="submit" name="button" id="button" value="Submit" />
+  </label>
+</form>
+		
+		</div>
+		<p><a href="#one" data-rel="back" data-role="button" data-inline="true" data-icon="back">Home</a></p>			
+	</div><!-- /content -->
+	
+	<div data-role="footer">
+		<h4></h4>
+	</div><!-- /footer -->
+</div><!-- /page two -->
+
+</body>
+</html>

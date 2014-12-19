@@ -17,7 +17,7 @@ function jqUpdateSize(){
     var width = $(window).width();
     var height = $(window).height();
 
-	if(width > 801){
+	if(width > 699){
 		location.assign("underConstruction.html");
 	}
 	
@@ -217,14 +217,15 @@ predictions for the NHL, NBA, EPL, La Liga, Bundesliga, and many more leagues ac
 	<div data-role="content" data-theme="a">	
 		<h2>Contact us at BetterBetters@yahoo.com or 443-852-2680 or submit us a response below</h2>
 		<div>
-		<form method="post" action="underConstruction.html">
+		<form action="underConstruction.html" method="post" >
       <label for="fname">Name:</label>
-      <input type="text" name="fname" id="fname">
+      <input type="text" name="fname" id="fname"/> 
 	  <textarea name="textarea" id="textarea-a" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset" style="height: 93px;">                                                                                                                                                       
 	  </textarea>
-      <input type="submit" value="Submit Button"/>
-		
+      <input type="submit" value="Submit Button" action="underConstruction.html" />
+		</form>
 		</div>
+		
 		<p><a href="#one" data-rel="back" data-role="button" data-inline="true" data-icon="back">Home</a></p>			
 	</div><!-- /content -->
 	
